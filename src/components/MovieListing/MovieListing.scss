@@ -1,8 +1,27 @@
 @import "../../common/colors.scss";
 
 
-.movie-list, .show-list {
+// .movie-list, .show-list {
+//     margin: 20px 0px;
+//     h2 {
+//         color: $font-secondary;
+//         margin-bottom: 10px;
+//         font-weight: 500;
+//         text-align: center;
+//     }
+// }
+
+.movie-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-list,
+.show-list {
+    width: 100%;
     margin: 20px 0px;
+
     h2 {
         color: $font-secondary;
         margin-bottom: 10px;
@@ -11,8 +30,27 @@
     }
 }
 
-// .movie-container {
-//     display: grid;
-//     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-//     grid-gap: 15px;
-// }
+.movie-container {
+    padding: 0 10px;
+}
+
+/* Adjust the Slider dots for better visibility on mobile */
+.slick-dots {
+    bottom: -20px;
+}
+
+/* Add responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+
+    .movie-list,
+    .show-list {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .slick-dots {
+        bottom: -10px;
+    }
+}
+
